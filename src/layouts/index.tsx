@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import * as style from './Layouts.module.css';
 
-import Index from '../components/index'
+import Index from '../common/header/index'
 import './index.css'
 
 const Layout = ({ children, data }) => (
@@ -9,19 +10,12 @@ const Layout = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
+        { name: 'description', content: 'War quotes' },
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
     <Index siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className={style.content}>
       {children()}
     </div>
   </div>
