@@ -1,25 +1,40 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import * as style from './Layouts.module.css';
-
-import Index from '../common/header/index'
+import {History} from 'history';
 import './index.css'
 
-const Layout = ({ children, data }) => (
-  <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'War quotes' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Index siteTitle={data.site.siteMetadata.title} />
-    <div className={style.content}>
-      {children()}
-    </div>
-  </div>
-)
+export namespace ILayout {
+  export interface Props {
+    history: History;
+    children: () => any;
+    data: any;
+  }
+}
+
+class Layout extends React.Component<ILayout.Props> {
+  public componentDidMount() {
+    // this.props.history.push('/wiedzmin');
+  }
+  public render() {
+    const { children, data } = this.props;
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'War quotes' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+        {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
+        <div className={style.content}>
+          {children()}
+        </div>
+      </div>
+    )
+  }
+}
 
 export default Layout
 

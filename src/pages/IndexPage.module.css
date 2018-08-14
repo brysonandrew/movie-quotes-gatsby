@@ -1,0 +1,16 @@
+.IndexPage {
+  text-align: center;
+  margin-top: 60px;
+  & ul {
+    display: inline-block;
+    width: 360px;
+    list-style: none;
+    & li {
+      & a {
+        color: #000;
+        font-size: 50px;
+        text-decoration: none;
+      }
+    }
+  }
+}
