@@ -1,5 +1,4 @@
-export const script =
-  `[98][138].:: Napisy24.pl - Wprost od tłumaczy ::.
+export const script = `[98][138].:: Napisy24.pl - Wprost od tłumaczy ::.
 [138][204]{C:$aaaaaa}>> DarkProject SubGroup <<|www.dark-project.org
 [206][246]{C:$aaaaaa}<< tłumaczenie - Rarehare >>
 [246][288]{C:$aaaaaa}<< korekta - amon31 >>
@@ -1615,4 +1614,4 @@ export const script =
 [65166][65230]{C:$aaaaaa}<< tłumaczenie - Rarehare >>|<< korekta - amon31 >>
 [65232][65276]{C:$aaaaaa}>> DarkProject SubGroup <<|www.dark-project.org
 [65366][65406].:: Napisy24.pl - Wprost od tłumaczy ::.
-`;
+`

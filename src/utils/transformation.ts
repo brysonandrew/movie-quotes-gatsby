@@ -3,6 +3,5 @@ export function toPath(name) {
     .replace(/-/g, '')
     .replace(/\s/g, '-')
     .replace(/[.,]/g, '')
-    .toLowerCase();
+    .toLowerCase()
 }
-

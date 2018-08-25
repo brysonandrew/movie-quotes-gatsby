@@ -1,18 +1,23 @@
 import { FogParticle } from './particle'
 
 export class Main {
-  ctx;
-  canvasWidth;
-  canvasHeight;
-  x;
-  y;
-  particleCount;
-  maxVelocity;
-  particle;
-  particles;
-  image;
+  ctx
+  canvasWidth
+  canvasHeight
+  x
+  y
+  particleCount
+  maxVelocity
+  particle
+  particles
+  image
 
-  constructor({ selector = null, density = 50, velocity = 0.5, particle = null, } = {}) {
+  constructor({
+    selector = null,
+    density = 50,
+    velocity = 0.5,
+    particle = null,
+  } = {}) {
     const canvas = document.querySelector(selector)
     const bcr = canvas.parentElement.getBoundingClientRect()
     this.ctx = canvas.getContext('2d')
@@ -23,9 +28,9 @@ export class Main {
     this.maxVelocity = velocity
     this.particle = particle
 
-    this._createParticles();
-    this._setImage();
-    this._render();
+    this._createParticles()
+    this._setImage()
+    this._render()
   }
 
   _createParticles() {
@@ -34,7 +39,11 @@ export class Main {
     const random = (min, max) => Math.random() * (max - min) + min
 
     for (let i = 0; i < this.particleCount; i++) {
-      const particle = new FogParticle(this.ctx, this.canvasWidth, this.canvasHeight)
+      const particle = new FogParticle(
+        this.ctx,
+        this.canvasWidth,
+        this.canvasHeight
+      )
 
       particle.setPosition(
         random(0, this.canvasWidth),
@@ -58,17 +67,15 @@ export class Main {
   }
 
   _render() {
-    this.ctx.beginPath();
-
+    this.ctx.beginPath()
 
     // this.ctx.fillStyle = "rgba(0, 0, 0, 0)"
     // this.ctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight)
 
     this.particles.forEach(p => p.render())
 
-    requestAnimationFrame(() => this._render());
+    requestAnimationFrame(() => this._render())
 
-    this.ctx.closePath();
-
+    this.ctx.closePath()
   }
 }

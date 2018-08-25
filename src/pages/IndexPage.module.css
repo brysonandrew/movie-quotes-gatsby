@@ -1,15 +1,30 @@
 .IndexPage {
-  text-align: center;
   margin-top: 60px;
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   & ul {
-    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    border: 1px solid #eee;
     list-style: none;
+    transform: translate(-50%, -50%);
     & li {
+      position: absolute;
       display: block;
       text-align: center;
+      transform: translate(-50%, -50%);
       & a {
         color: #000;
-        font-size: 50px;
+        font-size: 28px;
+        padding-left: 10px;
         text-decoration: none;
       }
     }

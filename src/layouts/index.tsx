@@ -1,14 +1,14 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import * as style from './Layouts.module.css';
-import {History} from 'history';
+import * as style from './Layouts.module.css'
+import { History } from 'history'
 import './index.css'
 
 export namespace ILayout {
   export interface Props {
-    history: History;
-    children: () => any;
-    data: any;
+    history: History
+    children: () => any
+    data: any
   }
 }
 
@@ -17,7 +17,7 @@ class Layout extends React.Component<ILayout.Props> {
     // this.props.history.push('/wiedzmin');
   }
   public render() {
-    const { children, data } = this.props;
+    const { children, data } = this.props
     return (
       <div>
         <Helmet
@@ -28,9 +28,7 @@ class Layout extends React.Component<ILayout.Props> {
           ]}
         />
         {/*<Header siteTitle={data.site.siteMetadata.title} />*/}
-        <div className={style.content}>
-          {children()}
-        </div>
+        <div className={style.content}>{children()}</div>
       </div>
     )
   }

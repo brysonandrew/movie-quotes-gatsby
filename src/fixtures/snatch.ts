@@ -1,5 +1,4 @@
-export const script =
-  `00:00:00:www.napiprojekt.pl - nowa jakośæ napisów.|Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
+export const script = `00:00:00:www.napiprojekt.pl - nowa jakośæ napisów.|Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
 00:00:36:Nazywam się Turkish.
 00:00:38:Zabawnie, jak na Angola.
 00:00:40:Moi rodzice ocaleli z tej samej katastrofy.|Tak się poznali.
@@ -1363,4 +1362,4 @@ export const script =
 01:35:04:Znasz kogoś,|kto byłby zainteresowany?
 01:35:11:Mo¿e...
 01:35:14:tłumaczenie: Maæko
-`;
+`

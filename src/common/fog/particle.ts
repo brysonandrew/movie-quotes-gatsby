@@ -1,12 +1,12 @@
 export class FogParticle {
-  ctx;
-  canvasWidth;
-  canvasHeight;
-  x;
-  y;
-  xVelocity;
-  yVelocity;
-  image;
+  ctx
+  canvasWidth
+  canvasHeight
+  x
+  y
+  xVelocity
+  yVelocity
+  image
 
   constructor(ctx, canvasWidth, canvasHeight) {
     this.ctx = ctx
@@ -27,7 +27,7 @@ export class FogParticle {
   }
 
   setImage(image) {
-    this.image = image;
+    this.image = image
   }
 
   render() {

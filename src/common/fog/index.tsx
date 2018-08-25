@@ -1,9 +1,8 @@
-import * as React from 'react';
-import * as style from './Fog.module.css';
+import * as React from 'react'
+import * as style from './Fog.module.css'
 import { Main } from './main'
 
 export class Fog extends React.Component<{}> {
-
   public componentDidMount() {
     new Main({
       selector: '#fog',
@@ -15,8 +14,8 @@ export class Fog extends React.Component<{}> {
   public render() {
     return (
       <div className={style.Fog}>
-        <canvas id="fog"/>
+        <canvas id="fog" />
       </div>
-    );
+    )
   }
 }

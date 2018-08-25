@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 import { HEADER_TEXT } from './header-text'
-import * as style from './Header.module.css';
+import * as style from './Header.module.css'
 
 const Header = ({ siteTitle }) => (
   <div className={style.Header}>

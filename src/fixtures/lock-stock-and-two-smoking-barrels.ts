@@ -1,5 +1,4 @@
-const script =
-  `{1120}{1197}Oddzielmy klientów|od tajniaków
+const script = `{1120}{1197}Oddzielmy klientów|od tajniaków
 {1204}{1264}i ufnych od nieufnych.
 {1276}{1387}Jeśli nie kupujecie,|znaczy, że kradniecie.
 {1399}{1459}Ten towar pierwszy raz widzi
@@ -1264,4 +1263,4 @@ const script =
 {147643}{147732}- Zepsujesz!|- Niczego nie zepsuję!
 {147842}{147880}Daj telefon!
 {147888}{147969}Zamknijcie się! Jest sygnał!
-{148636}{148724}Pamięci|LENNY'EGO McLEANA(Guv'nora)`;
+{148636}{148724}Pamięci|LENNY'EGO McLEANA(Guv'nora)`

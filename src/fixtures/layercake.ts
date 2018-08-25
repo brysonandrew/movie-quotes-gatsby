@@ -1,5 +1,4 @@
-export const script =
-  `{1}{1}23.976
+export const script = `{1}{1}23.976
 {324}{418}www.NapiProjekt.pl - nowa jakość napisów.|Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
 {420}{508}<<Tłumaczenie: Scudy>>|scudy@op.pl
 {544}{623}synchro **stemil99**
@@ -1070,4 +1069,4 @@ export const script =
 {144820}{144873}Nie!
 {144976}{145024}Przepraszam.
 {145239}{145334}www.NapiProjekt.pl - nowa jakość napisów.|Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
-`;
+`
