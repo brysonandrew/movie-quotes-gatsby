@@ -2,6 +2,7 @@ import * as React from 'react'
 
 export enum EIconType {
   Lion = 'Lion',
+  Next = 'Next',
 }
 
 export const ICONS = {
@@ -34,6 +35,31 @@ export const ICONS = {
         <path d="m 58.6,524 c -1.72497,4.54839 -8.26265,6.5939 -14.2,5" />
       </g>
       <g transform="translate(0,-450)" />
+    </svg>
+  ),
+  ArrowNext: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z" />
+    </svg>
+  ),
+  ArrowBack: (
+    <svg
+      style={{ transform: 'rotate(-180deg)' }}
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z" />
     </svg>
   ),
 }

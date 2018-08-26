@@ -8,7 +8,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: #757575;
     & div {
       margin-top: 20px;
       text-align: center;
@@ -27,6 +27,7 @@
   }
   & .subSentence.indexSelected {
     background: #000;
+    color: #FFF;
   }
   & img {
     object-fit: cover;
