@@ -7,7 +7,7 @@ export enum EIconType {
 
 export const ICONS = {
   Lion: (
-    <svg version="1.1" width="200" height="250">
+    <svg version="1.1" width="200" height="250" fill="currentColor">
       <g transform="translate(0,-450)" />
       <g transform="translate(0,-450)" />
       <g transform="translate(0,-450)" />

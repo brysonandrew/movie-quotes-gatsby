@@ -4,6 +4,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    color: #FFF;
     transform: translate(-50%, -50%);
   }
   & ul {
@@ -22,7 +23,7 @@
       text-align: center;
       transform: translate(-50%, -50%);
       & a {
-        color: #000;
+        color: #FFF;
         font-size: 28px;
         padding-left: 10px;
         text-decoration: none;

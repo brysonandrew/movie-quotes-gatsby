@@ -1,19 +1,19 @@
 import * as React from 'react'
-import * as classNames from 'classnames'
 import Link from 'gatsby-link'
+import * as classNames from 'classnames'
 import { ImageLoader } from '../../common/image-loader'
-import { ICONS } from '../../common/icons'
 import { defined } from '../../utils/evaluation'
-import * as style from './War.module.css'
-import { toPath } from '../../utils/transformation'
+import { nextPath, prevPath } from '../../utils/page'
+import { ICONS } from '../icons'
+import * as style from './ImageText.module.css'
 
 export namespace IImageText {
   export interface Props {
-    src: string;
-    alt: string;
-    quote: ILanguages[];
-    backPath: string;
-    nextPath: string;
+    name: string
+    path: string
+    src: string
+    alt: string
+    quote: ILanguages[]
   }
   export interface State {
     indexSelected: number
@@ -21,8 +21,8 @@ export namespace IImageText {
 }
 
 export interface ILanguages {
-  en: string;
-  pl: string;
+  en: string
+  pl: string
 }
 
 export enum ELanguage {
@@ -30,7 +30,10 @@ export enum ELanguage {
   Polish = 'pl',
 }
 
-export default class ImageText extends React.Component<IImageText.Props, IImageText.State> {
+export class ImageText extends React.Component<
+  IImageText.Props,
+  IImageText.State
+> {
   constructor(props: IImageText.Props, context?: any) {
     super(props, context)
     this.state = {
@@ -57,7 +60,7 @@ export default class ImageText extends React.Component<IImageText.Props, IImageT
     <div
       key={`subSentence-${index}`}
       className={classNames(style.subSentence, {
-        [style.indexSelected]: index === this.state.indexSelected
+        [style.indexSelected]: index === this.state.indexSelected,
       })}
       onMouseEnter={() => this.handleMouseEnter(index)}
       onMouseLeave={this.handleMouseLeave}
@@ -67,9 +70,9 @@ export default class ImageText extends React.Component<IImageText.Props, IImageT
   )
 
   public render() {
-    const { quote, ...imageProps } = this.props
+    const { quote, name, path, ...imageProps } = this.props
     return (
-      <div className={style.War}>
+      <div className={style.ImageText}>
         <ImageLoader {...imageProps} />
         <div className={style.quotes}>
           <div className={style.english}>
@@ -89,8 +92,12 @@ export default class ImageText extends React.Component<IImageText.Props, IImageT
               .map(this.makeSentence)}
           </div>
         </div>
-        <Link className={style.back} to={this.props.backPath}>{ICONS.ArrowBack}</Link>
-        <Link className={style.next} to={this.props.nextPath}>{ICONS.ArrowNext}</Link>
+        <Link className={style.prev} to={prevPath(name)}>
+          {ICONS.ArrowBack}
+        </Link>
+        <Link className={style.next} to={nextPath(name)}>
+          {ICONS.ArrowNext}
+        </Link>
       </div>
     )
   }
