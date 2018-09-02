@@ -1,0 +1,12 @@
+.LinkList {
+  & ul {
+    list-style: none;
+    & li {
+      font-size: 21px;
+      & a {
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+  }
+}

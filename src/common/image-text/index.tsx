@@ -14,6 +14,7 @@ export namespace IImageText {
     src: string
     alt: string
     quote: ILanguages[]
+    sourceKey: string;
   }
   export interface State {
     indexSelected: number
@@ -70,7 +71,7 @@ export class ImageText extends React.Component<
   )
 
   public render() {
-    const { quote, name, path, ...imageProps } = this.props
+    const { quote, name, path, sourceKey, ...imageProps } = this.props
     return (
       <div className={style.ImageText}>
         <ImageLoader {...imageProps} />
@@ -92,10 +93,10 @@ export class ImageText extends React.Component<
               .map(this.makeSentence)}
           </div>
         </div>
-        <Link className={style.prev} to={prevPath(name)}>
+        <Link className={style.prev} to={prevPath(name, sourceKey)}>
           {ICONS.ArrowBack}
         </Link>
-        <Link className={style.next} to={nextPath(name)}>
+        <Link className={style.next} to={nextPath(name, sourceKey)}>
           {ICONS.ArrowNext}
         </Link>
       </div>

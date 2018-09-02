@@ -16,6 +16,11 @@
     & div:first-child {
       margin-top: 0;
     }
+    & .english, & .polish {
+      padding: 0 20px 20px;
+      border-radius: 11px;
+      background: rgba(0,0,0, 0.44);
+    }
   }
   & .subSentence {
     display: inline-block;
@@ -30,7 +35,7 @@
   }
   & .subSentence.indexSelected {
     background: #000;
-    color: #fff;
+    color: #FFF;
   }
   & img {
     object-fit: cover;

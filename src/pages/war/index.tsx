@@ -1,32 +1,20 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
 import { IPage } from '../../utils/page'
-import * as style from './War.module.css'
-import { ILoveTheSmellPage } from './i-love-the-smell-of-napalm-in-the-morning'
-import { IWatchedAPage } from './i-watched-a-snail-crawl-along-the-edge'
+import { data as page1 } from './i-love-the-smell-of-napalm-in-the-morning'
+import { data as page2 } from './i-watched-a-snail-crawl-along-the-edge'
+import { ELinkListPrefixType, LinkList } from '../../common/link-list'
 
-export const pages: IPage[] = [ILoveTheSmellPage, IWatchedAPage]
+export const warPages: IPage[] = [page1, page2]
 
 export namespace IWar {
   export interface Props {
-    history: History
   }
 }
 
 export default class War extends React.Component<IWar.Props> {
   public render() {
     return (
-      <div className={style.War}>
-        <ul>
-          {pages.map((page: IPage) => (
-            <li key={page.name}>
-              <Link to={`/war/${page.path}`}>
-                {page.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <LinkList pages={warPages} linkPrefix={ELinkListPrefixType.War}/>
     )
   }
 }

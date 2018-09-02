@@ -1,16 +1,19 @@
 import * as React from 'react'
-import * as style from './Humor.module.css'
+import { IPage } from '../../utils/page'
+import { data as page1 } from './i-didnt-expect-a-fucking-rainforest'
+import { ELinkListPrefixType, LinkList } from '../../common/link-list'
+
+export const humorPages: IPage[] = [page1]
 
 export namespace IHumor {
-  export interface Props {}
+  export interface Props {
+  }
 }
 
 export default class Humor extends React.Component<IHumor.Props> {
-  constructor(props: IHumor.Props, context?: any) {
-    super(props, context)
-  }
-
   public render() {
-    return <div className={style.Humor}>Humor</div>
+    return (
+      <LinkList pages={humorPages} linkPrefix={ELinkListPrefixType.Humor}/>
+    )
   }
 }

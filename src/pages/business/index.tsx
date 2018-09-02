@@ -1,16 +1,19 @@
 import * as React from 'react'
-import * as style from './Business.module.css'
+import { IPage } from '../../utils/page'
+import { data as page1 } from './im-gonna-make-him-an-offer/data'
+import { ELinkListPrefixType, LinkList } from '../../common/link-list'
+
+export const businessPages: IPage[] = [page1]
 
 export namespace IBusiness {
-  export interface Props {}
+  export interface Props {
+  }
 }
 
 export default class Business extends React.Component<IBusiness.Props> {
-  constructor(props: IBusiness.Props, context?: any) {
-    super(props, context)
-  }
-
   public render() {
-    return <div className={style.Business}>Business</div>
+    return (
+      <LinkList pages={businessPages} linkPrefix={ELinkListPrefixType.Business}/>
+    )
   }
 }
