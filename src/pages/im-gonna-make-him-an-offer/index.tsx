@@ -4,7 +4,7 @@ const path = '/im-gonna-make-him-an-offer';
 export default () => (
   <ImageText
     path={path}
-    src={require('./background.png')}
+    src={require('./background.jpg')}
     alt="Background image"
     quote={[
       {

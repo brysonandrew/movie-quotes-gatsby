@@ -5,7 +5,7 @@ const path = '/i-love-the-smell-of-napalm';
 export default () => (
   <ImageText
     path={path}
-    src={require('./background.png')}
+    src={require('./background.jpg')}
     alt="Background image"
     quote={[
       {

@@ -1,3 +1,7 @@
-.content {
-  margin: 0 auto;
+.Layout {
+  height: 100%;
+  & .content {
+    margin: 0 auto;
+    height: 100%;
+  }
 }

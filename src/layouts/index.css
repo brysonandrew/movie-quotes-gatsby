@@ -12,6 +12,10 @@ body {
   background: #FFF;
 }
 
+:global(#___gatsby) {
+  height: 100%;
+}
+
 :global(.language) {
   position: absolute;
   font-size: 42px;
