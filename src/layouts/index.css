@@ -1,12 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo');
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Cardo', serif;
+  font-family: 'Lato', serif;
+  font-weight: bold;
 }
 
 html,
 body {
   height: 100%;
-  background: #212121;
+  background: #FFF;
+}
+
+:global(.language) {
+  position: absolute;
+  font-size: 42px;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  width: calc(100% - 40px);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: #FFF;
+  border-radius: 11px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  :global(.language) {
+    font-size: 28px;
+  }
 }

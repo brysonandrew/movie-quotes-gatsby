@@ -6,7 +6,7 @@ import { IPage } from '../../utils/page'
 export enum ELinkListPrefixType {
   War = '/war/',
   Business = '/business/',
-  Humor = '/humor/'
+  Humor = '/humor/',
 }
 
 export namespace ILinkList {
@@ -22,12 +22,10 @@ export function LinkList(props: ILinkList.Props) {
       <ul>
         {props.pages.map((page: IPage) => (
           <li key={page.name}>
-            <Link to={`${props.linkPrefix}${page.path}`}>
-              {page.name}
-            </Link>
+            <Link to={`${props.linkPrefix}${page.path}`}>{page.name}</Link>
           </li>
         ))}
       </ul>
     </div>
-  );
+  )
 }

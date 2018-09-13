@@ -1,14 +1,15 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-import * as classNames from 'classnames'
-import { ImageLoader } from '../../common';
 import { defined } from '../../utils/evaluation'
-import { ICONS } from '../icons'
-import * as style from './ImageText.module.css'
 import { PATHS } from '../../utils/page'
+import { ButtonNext } from '../button-next'
+import { WordFragment } from '../word-fragment'
+import { SourceLanguage } from '../source-language'
+import { TargetLanguage } from '../target-language'
+import * as style from './ImageText.module.css'
 
 export namespace IImageText {
   export interface Props {
+    path: string
     src: string
     alt: string
     quote: ILanguages[]
@@ -55,47 +56,43 @@ export class ImageText extends React.Component<
   }
 
   private makeSentence = (subSentence, index) => (
-    <div
+    <WordFragment
       key={`subSentence-${index}`}
-      className={classNames(style.subSentence, {
-        [style.indexSelected]: index === this.state.indexSelected,
-      })}
-      onMouseEnter={() => this.handleMouseEnter(index)}
+      index={index}
+      indexSelected={this.state.indexSelected}
+      subSentence={subSentence}
+      onMouseEnter={this.handleMouseEnter}
       onMouseLeave={this.handleMouseLeave}
-    >
-      {subSentence}
-    </div>
+    />
   )
 
+  private randomIndex() {
+    let i = Math.floor(Math.random() * PATHS.length);
+    while (this.props.path === PATHS[i]) {
+      this.randomIndex();
+      i = Math.floor(Math.random() * PATHS.length);
+    }
+    return i;
+  }
+
+  private renderQuotes(type: ELanguage) {
+    return this.props.quote
+      .reduce((a, c) => this.splitLanguageSentence(a, c, type), [])
+      .map(this.makeSentence)
+  }
+
   public render() {
-    const { quote, ...imageProps } = this.props
+    const { quote, path, ...imageProps } = this.props
+    const i = this.randomIndex();
     return (
       <div className={style.ImageText}>
-        <ImageLoader {...imageProps} />
-        <div className={style.quotes}>
-          <div className={style.english}>
-            {quote
-              .reduce(
-                (a, c) => this.splitLanguageSentence(a, c, ELanguage.English),
-                []
-              )
-              .map(this.makeSentence)}
-          </div>
-          <div className={style.polish}>
-            {quote
-              .reduce(
-                (a, c) => this.splitLanguageSentence(a, c, ELanguage.Polish),
-                []
-              )
-              .map(this.makeSentence)}
-          </div>
-        </div>
-        <Link className={style.prev} to={PATHS[0]}>
-          {ICONS.ArrowBack}
-        </Link>
-        <Link className={style.next} to={PATHS[1]}>
-          {ICONS.ArrowNext}
-        </Link>
+        <TargetLanguage>
+          {this.renderQuotes(ELanguage.Polish)}
+        </TargetLanguage>
+        <SourceLanguage imageProps={imageProps}>
+          {this.renderQuotes(ELanguage.English)}
+        </SourceLanguage>
+        <ButtonNext index={i}/>
       </div>
     )
   }

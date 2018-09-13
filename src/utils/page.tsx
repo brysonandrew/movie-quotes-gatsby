@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export const PATHS = [
-  '/i-didnt-expect-a-fucking-rainforest',
-  '/i-love-the-smell-of-napalm'
-];
+  '/i-love-the-smell-of-napalm',
+  '/im-gonna-make-him-an-offer',
+]

@@ -1,15 +1,14 @@
 import * as React from 'react'
-import {History} from 'history';
+import { History } from 'history'
 import { PATHS } from '../utils/page'
-import * as style from './IndexPage.module.css'
 
 type TProps = {
-  history: History;
+  history: History
 }
 
 class IndexPage extends React.Component<TProps> {
   componentDidMount() {
-    this.props.history.push(PATHS[0]);
+    this.props.history.push(PATHS[0])
   }
   public render() {
     return null

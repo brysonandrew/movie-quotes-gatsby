@@ -1,0 +1,19 @@
+.TargetLanguage {
+  position: absolute;
+  right: 0;
+  bottom: 33%;
+  height: 67%;
+  width: 50%;
+  & :global(.language) {
+    color: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  .TargetLanguage {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+  }
+}

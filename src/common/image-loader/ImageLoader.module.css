@@ -1,14 +1,9 @@
 .ImageLoader {
-  position: absolute;
-  left: -10px;
-  top: -10px;
-  /*
-  left: 0;
-  top: 0;
-  */
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   background: #000;
-  transform: scale(1.05);
-
   &.Loading {
     opacity: 0.9;
     transition: opacity 1000ms;
@@ -18,6 +13,6 @@
   }
   &.Error {
   }
-  filter: sepia(500%) saturate(400%) blur(5px) grayscale(50%);
+  filter: grayscale(100%);
   transition: opacity 1000ms;
 }

@@ -2,10 +2,7 @@ import * as React from 'react'
 import * as style from './ImageLoader.module.css'
 
 export namespace IImageLoader {
-  export interface Props {
-    src: string
-    alt: string
-  }
+  export interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {}
   export interface State {
     loadStatus: ELoadStatus
   }

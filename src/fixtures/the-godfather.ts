@@ -5869,4 +5869,4 @@ Chyba powinniśmy się napić.
 02:52:52,000 --> 02:52:54,400
 Don Corleone.
 
-`;
+`

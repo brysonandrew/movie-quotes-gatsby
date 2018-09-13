@@ -1,5 +1,28 @@
 import * as React from 'react'
 import { ImageText } from '../../common/image-text'
-import { data } from '../../data/im-gonna-make-him-an-offer/data'
-
-export default () => <ImageText {...data}/>
+const path = '/im-gonna-make-him-an-offer';
+export default () => (
+  <ImageText
+    path={path}
+    src={require('./background.png')}
+    alt="Background image"
+    quote={[
+      {
+        en: "I'm gonna make him",
+        pl: 'Złożę mu',
+      },
+      {
+        en: 'an offer',
+        pl: 'propozycję',
+      },
+      {
+        en: "he can't",
+        pl: 'nie',
+      },
+      {
+        en: 'refuse',
+        pl: 'do odrzucenia',
+      },
+    ]}
+  />
+)
