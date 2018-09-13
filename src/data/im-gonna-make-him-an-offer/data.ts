@@ -1,12 +1,8 @@
-import { toPath } from '../../../utils/transformation'
-import { IPage } from '../../../utils/page'
-const name = 'Im gonna make him an offer';
+import { IImageText } from '../../common/image-text'
 
-export const data: IPage = {
-  name,
-  path: toPath(name),
+export const data: IImageText.Props = {
   src: require('./background.png'),
-  alt: `${name} Image`,
+  alt: 'Background image',
   quote: [
     {
       en: 'I\'m gonna make him',

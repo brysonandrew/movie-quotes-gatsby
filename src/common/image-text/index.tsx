@@ -1,20 +1,17 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
 import * as classNames from 'classnames'
-import { ImageLoader } from '../../common/image-loader'
+import { ImageLoader } from '../../common';
 import { defined } from '../../utils/evaluation'
-import { nextPath, prevPath } from '../../utils/page'
 import { ICONS } from '../icons'
 import * as style from './ImageText.module.css'
+import { PATHS } from '../../utils/page'
 
 export namespace IImageText {
   export interface Props {
-    name: string
-    path: string
     src: string
     alt: string
     quote: ILanguages[]
-    sourceKey: string;
   }
   export interface State {
     indexSelected: number
@@ -71,7 +68,7 @@ export class ImageText extends React.Component<
   )
 
   public render() {
-    const { quote, name, path, sourceKey, ...imageProps } = this.props
+    const { quote, ...imageProps } = this.props
     return (
       <div className={style.ImageText}>
         <ImageLoader {...imageProps} />
@@ -93,10 +90,10 @@ export class ImageText extends React.Component<
               .map(this.makeSentence)}
           </div>
         </div>
-        <Link className={style.prev} to={prevPath(name, sourceKey)}>
+        <Link className={style.prev} to={PATHS[0]}>
           {ICONS.ArrowBack}
         </Link>
-        <Link className={style.next} to={nextPath(name, sourceKey)}>
+        <Link className={style.next} to={PATHS[1]}>
           {ICONS.ArrowNext}
         </Link>
       </div>
