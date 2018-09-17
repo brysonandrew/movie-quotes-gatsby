@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Link from 'gatsby-link'
-import { PATHS } from '../../utils/page'
 import { ICONS } from '../icons'
 import * as style from './ButtonNext.module.css';
+import { PATHS } from '../../utils/page'
 
 export namespace IButtonNext {
   export interface Props {

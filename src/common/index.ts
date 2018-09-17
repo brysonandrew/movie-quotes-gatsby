@@ -1,5 +1,5 @@
-export { Fog } from './fog'
-export { FogPage, IFogPage } from './fog-page'
+export { Fog } from '../../graveyard/fog'
+export { FogPage, IFogPage } from '../../graveyard/fog-page'
 export { ICONS, EIconType } from './icons'
 export { ImageLoader, IImageLoader } from './image-loader'
 export { IImageText, ILanguages } from './image-text'

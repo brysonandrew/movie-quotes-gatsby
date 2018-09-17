@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { ImageText } from '../../common/image-text'
-const path = '/im-gonna-make-him-an-offer';
+import { path2 } from '../../utils/page'
+
 export default () => (
   <ImageText
-    path={path}
+    path={path2}
     src={require('./background.jpg')}
     alt="Background image"
     quote={[

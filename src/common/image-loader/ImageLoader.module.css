@@ -13,6 +13,5 @@
   }
   &.Error {
   }
-  filter: grayscale(100%);
   transition: opacity 1000ms;
 }

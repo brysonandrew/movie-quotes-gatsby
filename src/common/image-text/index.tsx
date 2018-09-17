@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { defined } from '../../utils/evaluation'
-import { PATHS } from '../../utils/page'
 import { ButtonNext } from '../button-next'
 import { WordFragment } from '../word-fragment'
 import { SourceLanguage } from '../source-language'
 import { TargetLanguage } from '../target-language'
 import * as style from './ImageText.module.css'
+import { PATHS } from '../../utils/page'
 
 export namespace IImageText {
   export interface Props {
