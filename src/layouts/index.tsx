@@ -13,9 +13,9 @@ function Layout(props: ILayout.Props) {
   return (
     <div className={style.Layout}>
       <Helmet
-        title="Lion Tongue"
+        title="Movie quotes"
         meta={[
-          { name: 'description', content: 'War quotes' },
+          { name: 'description', content: 'Cool quotes from movies' },
           { name: 'keywords', content: 'sample, something' },
         ]}
       >
